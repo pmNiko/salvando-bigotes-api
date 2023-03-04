@@ -14,8 +14,6 @@ interface IUser {
   numberDocument: string;
   status: boolean;
   google: boolean;
-  createAt: string;
-  updateAt: string;
 }
 
 export default IUser;
