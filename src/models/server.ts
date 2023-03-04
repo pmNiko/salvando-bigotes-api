@@ -2,7 +2,7 @@ import express, { Application } from "express";
 import cors from "cors";
 
 import dbConnection from "../db/config";
-import appRoutes from "../routes/auth.routes";
+import authRoutes from "../routes/auth.routes";
 import userRoutes from "../routes/user.routes";
 import doccumentsTypeRoutes from "../routes/document-type.routes";
 import rolesRoutes from "../routes/role.routes";
@@ -52,7 +52,7 @@ class Server {
   }
 
   routes() {
-    this.app.use(this.paths.auth, appRoutes);
+    this.app.use(this.paths.auth, authRoutes);
     this.app.use(this.paths.users, userRoutes);
     this.app.use(this.paths.documentsTypes, doccumentsTypeRoutes);
     this.app.use(this.paths.roles, rolesRoutes);
@@ -61,7 +61,7 @@ class Server {
   }
 
   listen() {
-    this.app.listen(this.port, () => {
+    return this.app.listen(this.port, () => {
       console.log(`Server listening: ${this.port}.`);
     });
   }
