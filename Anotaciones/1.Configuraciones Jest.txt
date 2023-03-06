@@ -1,0 +1,22 @@
+_______________________ Jest Config ____-------
+
+
+ 👉🏻 Para que la suite de test te sea mas ligera a la hora de correr tus 
+    pruebas automatizadas deberias cancelar el coverage:
+
+        export default {
+            preset: "ts-jest",
+            testEnvironment: "node",
+            coverageDirectory: "./coverage",
+            coverageReporters: ["html", "text"],
+            collectCoverage: true,                <---------   collectCoverage: false 
+
+
+ 👉🏻 Por otro lado si estas ejecutando prubas y se te traban 
+    podes optar por usar skip en los test y correr de a uno 
+    esto te va ayudar a enfocarte en el error que te esta trabando.
+
+ 👉🏻 En las configuraciones de Jest existen multiples flags 
+    que te ayudan a modificar el comportamiento por default. 
+    Por ejemplo podrias configurar la propiedad watch que reacciones
+    a tus cambios en caliente. 

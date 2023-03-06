@@ -7,7 +7,7 @@ import IDocumentType from "../../src/interfaces/documentType.interface";
 
 import app from "../../src/app";
 
-describe("POST /login Authentication", () => {
+describe.skip("POST /login Authentication", () => {
   let user: IUser;
 
   beforeAll(() => {

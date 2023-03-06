@@ -1,0 +1,51 @@
+______________________ Entornos de ejecución _____-------
+
+    Para la base de datos utilice la version latest de mongo 
+    de Docker Hub: https://hub.docker.com/_/mongo
+
+        configuración 
+
+              mongo:
+                image: mongo
+                restart: always
+                environment:
+                MONGO_INITDB_ROOT_USERNAME: root
+                MONGO_INITDB_ROOT_PASSWORD: example
+
+        Cadena de conexion:
+            # Mongo DB:
+            MONGODB_CNN=mongodb://root:example@localhost:27017/test?authSource=admin
+
+            # JWT
+            SECRET_KEY=MyNewSecretPasswordTokenKey124596
+
+
+    🍀 Para ejecutar distintos entornos podrias usar esta tecnica 
+
+        👉🏻 Crea los distindo .env ejemplo:
+
+            1- Development:    .env.development 
+            1- Staging:        .env.stagin 
+            1- Production:     .env.production 
+            1- Test:           .env.test 
+
+        👉🏻 Luego genera un archivo config.ts 
+
+            const dotenv = require('dotenv')
+
+            dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+
+        
+        👉🏻 Por último tus scripts en el package.json
+
+                "scripts": {
+                    "dev": "NODE_ENV=development nodemon src/app",
+
+                        ------- 
+
+
+
+    **** Te dejo comentados los test y editado el que estaba dando error ****
+
+
+

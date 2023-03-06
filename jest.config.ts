@@ -3,7 +3,7 @@ export default {
   testEnvironment: "node",
   coverageDirectory: "./coverage",
   coverageReporters: ["html", "text"],
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: ["**/*.{ts,js}"],
   modulePathIgnorePatterns: [
     "<rootDir>/dist/",

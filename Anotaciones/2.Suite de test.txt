@@ -1,0 +1,16 @@
+_______________ Pruebas Automáticas _____-
+
+
+    📚 La suite de test esta muy apretada se hace dificil 
+        seguir el hilo tal vez podrias crear un setup 
+        del cual hagas referencia a todas las funciones 
+        y/o props en comun (DRY concept).
+
+    📚 Mi recomendación con respecto a las pruebas es que 
+        definas cuales son Unitarias y cuales de integración 
+        entonces vas a ver con claridad que muchass veces 
+        intentamos acceder al interior de los objetos para 
+        tomar sus piezas internas. 
+       Dicho esto una vez separes responsabilidades tus test 
+        quedaran mas cercanos a la programación declarativa y 
+        mas lejanos a la programación imperativa. 

@@ -1,0 +1,11 @@
+_______________ Package Json ---------
+
+    ⛔️ En el script del package.json se estaba haciendo referencia 
+        al distribuible lo cambie para que llame a la app.ts demtro 
+        de src/.
+
+    📚 El proyecto esta muy bien estructurado podrias usar los famosos 
+        archivos barril es decir los index.ts que te ayudan a exportar 
+        de manera conjunta todo el contenido dentro de la carpeta contenedora.
+
+        
